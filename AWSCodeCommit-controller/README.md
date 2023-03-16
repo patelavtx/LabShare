@@ -1,12 +1,15 @@
 
 # Sample AWS CodeBuild + CodePipeline deploying Aviatrix AWS controller
 
-##
-```
-Deploy controller using aws cicd  (folder awscid-controller) and TF code (remember to copy ./use-tf-state/backend.tf to controller repo directory  before pushing to AWS Codecommit):
+## Brief
 
-    + Secrets Manager used to pass sensitive data via ENV variables -->  ./awscicd-controller/codebuild_and_codepipeline/buildspec/*yml)
-    + ./awscid-controller/cidcd-pipeline.tf -->  codebuild uses custom docker image : patela31/dockerctrl:1.0
+
+```
+1.  Deploy controller using aws cicd  (folder awscid-controller)
+2.  TF code (tfpipeline-awscontroller);   remember to copy "/use-tf-state/backend.tf" from step 1 to this folder
+3.  Secrets Manager used to pass sensitive data via ENV variables -->  ./awscicd-controller/codebuild_and_codepipeline/buildspec/*yml)
+4.  /awscid-controller/cidcd-pipeline.tf -->  codebuild uses custom docker image : patela31/dockerctrl:1.0
+
 
 ```
 
